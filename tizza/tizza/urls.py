@@ -15,11 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from tizza.user.views import SignupView
+from pizza.views import SignupView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('pizzas/', include('pizza.urls')),
-    path('register/', SignupView.as_view())
+    # path('pizzas/', include('pizza.urls')),
+    # path('register/', SignupView.as_view())
 
 ]

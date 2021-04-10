@@ -14,16 +14,16 @@ from django.views import View
 #     )
 
 
-class SignupView(View):
-    template_name = 'signup.html'
-    def post(self, request):
-        if form.is_valid():
-            form.save()
-            username = form.cleaned_data.get('username')
-            password = form.cleaned_data.get('password1')
-            user = authenticate(username=username,password=password)
-            login(request, user)
-            return redirect('/')
-    def get(self, request):
-        return render(request, self.template_name, {'form':
-        UserCreationForm()})
+# class SignupView(View):
+#     template_name = 'signup.html'
+#     def post(self, request):
+#         if form.is_valid():
+#             form.save()
+#             username = form.cleaned_data.get('username')
+#             password = form.cleaned_data.get('password1')
+#             user = authenticate(username=username,password=password)
+#             login(request, user)
+#             return redirect('/')
+#     def get(self, request):
+#         return render(request, self.template_name, {'form':
+#         UserCreationForm()})
